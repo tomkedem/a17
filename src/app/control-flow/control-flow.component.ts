@@ -1,4 +1,4 @@
-import { NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from "@angular/common";
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from "@angular/common";
 import { Component } from "@angular/core";
 
 @Component({
@@ -9,11 +9,24 @@ import { Component } from "@angular/core";
         NgIf,
         NgSwitch,
         NgSwitchCase,
-        NgSwitchDefault
+        NgSwitchDefault,
+        NgFor
     ]
 })
 
 export class ControlFlowComponent {
+    
     bestClub: boolean = true;
     clubName: 'real' | 'barca' | 'milan' = 'real';
+    // Example in the component class
+    clubs: never[] = [];
+
+    myTrack(index: number): number {
+        return index;
+    }
+    addClabs(): void {
+        this.clubs = ['real', 'barca', 'milan'];
+    }
+
+
 }

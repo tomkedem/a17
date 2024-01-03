@@ -1,6 +1,5 @@
-
 <h1>tset</h1>
-<div style="color: brown;" *ngIf="bestClub; else elseTemplate">Real Madrid</div>
+<!-- <div style="color: brown;" *ngIf="bestClub; else elseTemplate">Real Madrid</div>
 
 <ng-template #elseTemplate>
     <div style="color: brown;">Barcelona</div>
@@ -14,6 +13,8 @@
 <br>
 <button (click)="bestClub=!bestClub">Togggle</button> 
 
+-->
+<!--
 <br>
 <br>
 <br>
@@ -33,4 +34,20 @@
     @case ('barca') {  <div style="color: forestgreen;">Barca</div>}
     @case ('milan') {  <div style="color: forestgreen;">Milan</div>}
     @default  {  <div style="color: forestgreen;">Real</div>}
-  }
+  } 
+  -->
+
+<ul>
+    <li *ngFor="let club of clubs; trackBy myTrack" style="color: blue;">{{club}}</li>
+</ul>
+
+
+@for (club of clubs; track $index){
+    <ul>
+        <li style="color: red;">{{ club }}</li>
+    </ul>
+} @empty{
+    <ul>
+        <li style="color: rgb(7, 156, 136);">Empty</li>
+    </ul>
+}
