@@ -1,55 +1,26 @@
-<h1>tset</h1>
-<!-- <div style="color: brown;" *ngIf="bestClub; else elseTemplate">Real Madrid</div>
-
+<div *ngIf="bestClub; else elseTemplate">Real Madrid</div>
 <ng-template #elseTemplate>
-    <div style="color: brown;">Barcelona</div>
+    <div>Barcelona</div>
 </ng-template>
 
-@if(bestClub){
-    <div>Real Madrid</div>
-}@else {
-    <div>Barcelona</div>
-}
-<br>
 <button (click)="bestClub=!bestClub">Togggle</button> 
 
--->
-<!--
-<br>
-<br>
-<br>
 <div [ngSwitch]="clubName">
     <div *ngSwitchCase="'real'">Real</div>
     <div *ngSwitchCase="'barca'">Barca</div>
     <div *ngSwitchCase="'milan'">Milan</div>
     <div *ngSwitchDefault>Default</div>
   </div>
-  <br>
+ 
   <button (click)="clubName = 'real'">Real</button>
   <button (click)="clubName = 'barca'">Barca</button>
   <button (click)="clubName = 'milan'">Milan</button>
-
-  @switch (clubName) {
-    @case ('real') {  <div style="color: forestgreen;">Real</div>}
-    @case ('barca') {  <div style="color: forestgreen;">Barca</div>}
-    @case ('milan') {  <div style="color: forestgreen;">Milan</div>}
-    @default  {  <div style="color: forestgreen;">Real</div>}
-  } 
-  -->
 
 <ul>
     <li *ngFor="let club of clubs; trackBy myTrack">{{club}}</li>
 </ul>
 
+<ul>
+    <li *ngFor="let club of clubs">{{club}}</li>
+</ul>
 
-@for (club of clubs; track $index){
-    <ul>
-        <li>{{ club }}</li>
-    </ul>
-} @empty{
-    <ul>
-        <li>no clubs</li>
-    </ul>
-}
-
-<button (click)="addClabs()">Add</button>
