@@ -38,16 +38,18 @@
   -->
 
 <ul>
-    <li *ngFor="let club of clubs; trackBy myTrack" style="color: blue;">{{club}}</li>
+    <li *ngFor="let club of clubs; trackBy myTrack">{{club}}</li>
 </ul>
 
 
 @for (club of clubs; track $index){
     <ul>
-        <li style="color: red;">{{ club }}</li>
+        <li>{{ club }}</li>
     </ul>
 } @empty{
     <ul>
-        <li style="color: rgb(7, 156, 136);">Empty</li>
+        <li>no clubs</li>
     </ul>
 }
+
+<button (click)="addClabs()">Add</button>

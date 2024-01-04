@@ -19,7 +19,7 @@ export class ControlFlowComponent {
     bestClub: boolean = true;
     clubName: 'real' | 'barca' | 'milan' = 'real';
     // Example in the component class
-    clubs: never[] = [];
+    clubs: any[] = [];
 
     myTrack(index: number): number {
         return index;
