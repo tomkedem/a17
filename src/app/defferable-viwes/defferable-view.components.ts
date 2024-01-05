@@ -6,7 +6,7 @@ import { FooComponent } from "./foo";
     selector: 'app-defferable-view',
     template:`
         <h1>Defferable View</h1>        
-        @defer (when iSaySo){
+        @defer (on timer(2s)){
             <foo/>
         }
         <button (click)="iSaySo = true">Load</button>
@@ -15,8 +15,7 @@ import { FooComponent } from "./foo";
 })
 
 export class DefferableViewComponent {
-    iSaySo:boolean = false;     
-      
+    iSaySo:boolean = false;      
 }
 
 
