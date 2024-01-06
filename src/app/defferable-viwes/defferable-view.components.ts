@@ -7,9 +7,9 @@ import { FooComponent } from "./foo";
     template:`
         <h1>Defferable View</h1>  
         <div class="blue"></div>   
-        @defer (on viewport){
+        @defer (on hover){
             <foo/>
-        } @loading (after 1s; minimum 2s)
+        } @loading (minimum 2s)
         {
             <h1>loading...</h1>
         } @error {
